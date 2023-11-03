@@ -1,0 +1,32 @@
+﻿@page
+@using CVlassDemoPersonWebApp.model;
+@model CVlassDemoPersonWebApp.Pages.personer.IndexModel
+@{
+}
+
+<h1>Vis alle Personer</h1>
+
+<p>    
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Person Id</th>
+            <th>Navn</th>
+            <th>Adresse</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach(Person p in Model.Personer)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Name</td>
+                <td>@p.Adr</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
